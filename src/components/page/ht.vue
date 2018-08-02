@@ -108,7 +108,8 @@ export default {
           strContractName: "",
           strContractOrderDate: "",
           strContractStartDate: "",
-          strCurrency: ""
+          strCurrency: "",
+          cDefine10:''
         }
       ],
       totalPages: 0
@@ -179,7 +180,7 @@ export default {
 }
 
 .handle-input {
-  width: 300px;
+  width: 200px;
   display: inline-block;
 }
 .del-dialog-cnt {

@@ -106,7 +106,8 @@ export default {
           strContractName: "",
           strContractOrderDate: "",
           strContractStartDate: "",
-          strCurrency: ""
+          strCurrency: "",
+          cDefine10:''
         }
       ],
       totalPages:0

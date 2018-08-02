@@ -52,7 +52,7 @@
                 </el-table-column> -->
                  <el-table-column label="操作" width="100">
                     <template slot-scope="scope">
-                        <el-button size="small" type="primary" :disabled="checkDefine(content[scope.$index].cDefine10)" @click="pzadd(content[scope.$index].guid)">生成凭证</el-button>
+                        <el-button size="small" type="primary" :disabled="checkDefine(content[scope.$index].cDefine11)" @click="pzadd(content[scope.$index].guid)">生成凭证</el-button>
                     </template>
                 </el-table-column> 
             </el-table>
@@ -86,29 +86,29 @@ export default {
           dblExchange: 0,
           dblTotalCurrency: 0,
           guid: "",
-          cExecID:"",
-          cContractID:"",
-	        dtProduceDate:"",
-	        strContractName	:"",
-	        strContractKind:"",
-	        decRateMoney:""
+          cExecID: "",
+          cContractID: "",
+          dtProduceDate: "",
+          strContractName: "",
+          strContractKind: "",
+          decRateMoney: "",
+          cDefine11:""
         }
       ],
-      totalPages:0
+      totalPages: 0
     };
   },
   created() {
     this.getData();
   },
-  computed: {
-  },
+  computed: {},
   methods: {
     // 分页导航
     handleCurrentChange(val) {
       this.reqData.pageNum = val;
       this.getData();
     },
-    handleSizeChange(val){
+    handleSizeChange(val) {
       this.reqData.pageSize = val;
       this.getData();
     },
@@ -121,19 +121,19 @@ export default {
         });
     },
     search() {
-      this.reqData.pageNum=1;
-      this.getData()
+      this.reqData.pageNum = 1;
+      this.getData();
     },
-    checkDefine(val){
-        if(val){
-            return true
-        }
-        return false
+    checkDefine(val) {
+      if (val) {
+        return true;
+      }
+      return false;
     },
     pzadd(guid) {
       let reqData = {
         guid: guid,
-        type: 1
+        type: 2
       };
       this.$axios
         .post("/api/PZ/pzAdd", this.$qs.stringify(reqData))
@@ -143,11 +143,13 @@ export default {
             this.$message.error("生成凭证失败");
           } else {
             this.$message.success("生成凭证成功");
-            this.getData()
+            this.getData();
           }
+        })
+        .catch(err => {
+          this.$message.error("生成凭证失败");
         });
     }
-   
   }
 };
 </script>
@@ -169,10 +171,10 @@ export default {
   font-size: 16px;
   text-align: center;
 }
-.pagination { 
+.pagination {
   text-align: center;
 }
-.btnGroup{
+.btnGroup {
   float: right;
   margin: 20px 154px;
   clear: both;

@@ -44,7 +44,7 @@
           
                   <el-table-column label="操作" width="100">
                     <template slot-scope="scope">
-                        <el-button size="small" type="primary" :disabled="checkDefine(content[scope.$index].cDefine10)" @click="pzadd(content[scope.$index].guid)">生成凭证</el-button>
+                        <el-button size="small" type="primary" :disabled="checkDefine(content[scope.$index].cDefine11)" @click="pzadd(content[scope.$index].guid)">生成凭证</el-button>
                     </template>
                 </el-table-column>
             </el-table>
@@ -84,7 +84,8 @@ export default {
           dtProduceDate: "",
           strContractName: "",
           strContractKind: "",
-          decRateMoney: ""
+          decRateMoney: "",
+          cDefine11:""
         }
       ],
       totalPages: 0

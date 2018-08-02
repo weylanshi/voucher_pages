@@ -53,7 +53,7 @@
                 </el-table-column>
                     <el-table-column label="操作" width="100">
                     <template slot-scope="scope">
-                        <el-button size="small" type="primary" :disabled="checkDefine(content[scope.$index].cDefine10)" @click="pzadd(content[scope.$index].guid)">生成凭证</el-button>
+                        <el-button size="small" type="primary" :disabled="checkDefine(content[scope.$index].cDefine12)" @click="pzadd(content[scope.$index].guid)">生成凭证</el-button>
                     </template>
                 </el-table-column>
             </el-table>
@@ -92,7 +92,8 @@ export default {
           strCurrency: "",
           dblExchange: "",
           dblTotalCurrency: "",
-          dtCreateTime: ""
+          dtCreateTime: "",
+          cDefine12:""
         }
       ],
       totalPages: 0
