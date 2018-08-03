@@ -21,12 +21,12 @@
                     placeholder="制单日期最大日期"
                   >
                   </el-date-picker>
-                     <br>
+                     
                 <!-- <el-input v-model="reqData.date1" placeholder="制单日期最小日期" class="handle-input mr10"></el-input>
                 <el-input v-model="reqData.date2" placeholder="制单日期最大日期" class="handle-input mr10"></el-input> -->
-                <div class="btnGroup">
+            
                   <el-button type="primary" size="mini" icon="search" @click="search">搜索</el-button>
-                </div>
+               
             </div>
             <el-table :data="content" border  ref="multipleTable" empty-text="暂无数据">
                 <el-table-column prop="cExecID" label="合同执行单编码">
@@ -40,6 +40,8 @@
                 <el-table-column prop="strContractKind" label="合同类型" >
                 </el-table-column>
                 <el-table-column prop="decRateMoney" label="执行单总金额">
+                </el-table-column>
+                 <el-table-column prop="cDefine11" label="凭证编码" >
                 </el-table-column>
           
                 <!-- <el-table-column prop="address" label="地址" :formatter="formatter">
@@ -164,7 +166,7 @@ export default {
 }
 
 .handle-input {
-  width: 300px;
+  width: 200px;
   display: inline-block;
 }
 .del-dialog-cnt {

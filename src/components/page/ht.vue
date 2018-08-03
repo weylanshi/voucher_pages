@@ -60,6 +60,8 @@
                 </el-table-column>
                  <el-table-column prop="strWay" label="收支方向" >
                 </el-table-column>
+                 <el-table-column prop="cDefine10" label="凭证编码" >
+                </el-table-column>
            
                 <!-- <el-table-column prop="address" label="地址" :formatter="formatter">-->
 

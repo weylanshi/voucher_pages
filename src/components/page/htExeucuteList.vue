@@ -41,6 +41,8 @@
                 </el-table-column>
                 <el-table-column prop="decRateMoney" label="执行单总金额">
                 </el-table-column>
+                 <el-table-column prop="cDefine11" label="凭证编码" >
+                </el-table-column>
           
                   <el-table-column label="操作" width="100">
                     <template slot-scope="scope">
@@ -155,7 +157,7 @@ export default {
 }
 
 .handle-input {
-  width: 300px;
+  width: 200px;
   display: inline-block;
 }
 .del-dialog-cnt {
