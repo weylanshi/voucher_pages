@@ -94,7 +94,7 @@ export default {
           strContractName: "",
           strContractKind: "",
           decRateMoney: "",
-          cDefine11:""
+          cDefine11: ""
         }
       ],
       totalPages: 0
@@ -141,7 +141,7 @@ export default {
         .post("/api/PZ/pzAdd", this.$qs.stringify(reqData))
         .then(res => {
           res.pzId;
-          if (!res.pzId) {
+          if (res.pzId <= 0) {
             this.$message.error("生成凭证失败");
           } else {
             this.$message.success("生成凭证成功");
